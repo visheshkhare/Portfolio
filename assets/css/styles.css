@@ -334,13 +334,12 @@ body.light-theme {
 .home__handle {
   justify-self: center;
   width: 190px;
-  height: 293px;
+  height: 150px;
   background: linear-gradient(
     180deg,
     hsla(var(--first-hue), var(--sat), var(--lig), 1),
     hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
   );
-  border-radius: 10rem 10rem 1rem 1rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -528,7 +527,7 @@ body.light-theme {
 
 /*=============== SERVICES ===============*/
 .services__container {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   padding-top: 1rem;
 }
@@ -878,7 +877,7 @@ body.light-theme {
 
   .home__handle {
     width: 150px;
-    height: 253px;
+    height: 150px;
   }
 
   .home__img {
@@ -936,7 +935,7 @@ body.light-theme {
   }
 
   .services__container {
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(4, 160px);
     justify-content: center;
   }
 
@@ -1000,7 +999,7 @@ body.light-theme {
 
   .home__handle {
     width: 290px;
-    height: 400px;
+    height: 290px;
   }
 
   .home__img {
@@ -1049,12 +1048,12 @@ body.light-theme {
   }
 
   .skills__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(3, 350px);
     column-gap: 3rem;
   }
 
   .services__container {
-    grid-template-columns: repeat(3, 192px);
+    grid-template-columns: repeat(4, 192px);
     column-gap: 3rem;
   }
 
