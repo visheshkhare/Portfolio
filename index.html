@@ -728,11 +728,12 @@
           <div class="contact__content">
             <h3 class="contact__title">Write me your project</h3>
 
-            <form action="" class="contact__form">
+            <form action="" class="contact__form" onsubmit="sendEmail(); reset(); return false;">
               <div class="contact__form-div">
                 <label for="" class="contact__form-tag">Name</label>
                 <input
                   type="text"
+                  id="name"
                   placeholder="Insert your name"
                   class="contact__form-input"
                 />
@@ -742,6 +743,7 @@
                 <label for="" class="contact__form-tag">Mail</label>
                 <input
                   type="email"
+                  id="email"
                   placeholder="Insert your email"
                   class="contact__form-input"
                 />
@@ -751,7 +753,7 @@
                 <label for="" class="contact__form-tag"></label>
                 <textarea
                   name=""
-                  id=""
+                  id="message"
                   cols="30"
                   rows="10"
                   placeholder="Write your query"
@@ -762,6 +764,25 @@
               <button class="button">Send Message</button>
             </form>
           </div>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+            function sendEmail(){
+              Email.send({
+              Host : "smtp.gmail.com",
+              Username : "infovishesh@domain.com",
+              Password : "E1E083C38391816FC628236561C93984DD96",
+              To : 'visheshkhare03@gmail.com',
+              From : document.getElementById('email').value,
+              Subject : "new contact form ",
+              Body : "Name:" + document.getElementById("name").value
+              +"<br> Email: " + document.getElementById("email").value
+              +"<br> Message: " + document.getElementById("message").value
+              
+}).then(
+  message => alert("message Sent Succesfully")
+);
+            }
+          </script>
         </div>
       </section>
     </main>
